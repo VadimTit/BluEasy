@@ -1,0 +1,33 @@
+.footer { 
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    & nav > a {
+         color: $global-emphasis-color;
+         font-size: 12px;
+         padding: 0 8px;
+         text-transform: uppercase;
+         text-decoration: none;
+         &:hover {
+            color: $global-primary-color;
+            transition: 1s;
+        }
+    }
+
+        :not(:last-of-type) {
+         border-right: 1px solid $global-emphasis-color;
+        } 
+    }
+
+    &-year {
+        color: $global-emphasis-color;
+        font-size: 15px
+    }
+    @media (min-width: $breakpoint-small) {
+        &-nav {
+            flex-direction: inherit;
+        }
+    }
+}

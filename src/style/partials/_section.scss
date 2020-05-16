@@ -1,0 +1,225 @@
+$section-padding-vertical-top-m:              40px;
+$section-padding-vertical-top:                $section-padding-vertical-top-m * 2;
+
+$section-padding-vertical-bottom-m:           40px;
+$section-padding-vertical-bottom:             $section-padding-vertical-bottom-m * 2;
+
+
+$section-primary-background:                  $global-primary-background;
+$section-secondary-background:                $global-secondary-background;
+
+.section {
+  $self: &;
+  position: relative;
+  padding-top: $section-padding-vertical-top-m;
+  padding-bottom: $section-padding-vertical-bottom-m;
+  
+  &-background {
+    background-color: #3a454d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-foreground {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-title {
+    margin-bottom: 40px;
+    font-size: $h2-font-size-m;
+    position: relative;
+    color: $global-inverse-color;
+    text-align: center;
+    font-weight: 300;
+    &::before {
+      position:absolute;
+      bottom: 0;
+      width:45px;
+      height: 2px;
+      background-color: $global-inverse-color ;
+      content:"";
+    }
+  }
+  &-description {
+    color: $global-inverse-color;
+    margin-bottom: 30px;
+  }
+
+  &-modest {
+    background-color: $global-primary-color;
+  }
+
+  &-desctiption:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  &-overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(81, 95, 103, 0.65);
+  }
+
+  &-primary {
+    background: $section-primary-background;
+
+  }
+  
+  &-portfolio {
+    #{$self}-porftolio-head {
+      display: flex; 
+      justify-content: space-between;
+    }
+    #{$self}-title {
+      color: black;
+      &::before {
+        position:absolute;
+        bottom: 0;
+        width:45px;
+        height: 2px;
+        background-color: black;
+        content:"";
+      }
+    }
+  }
+
+  
+  
+  &-just {
+    background-color: $global-secondary-background;
+  }
+  &-twitter {
+    background-color: $global-primary-color;
+    #{$self}-twitter-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      align-items: center;
+      #{$self}-title {
+        margin: 0;
+      }
+    }
+    #{$self}-twitter-description {
+      color: $global-inverse-color;
+      font-size: 14px;
+      font-weight: 300;
+      & > span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-testimonials {
+    background-color: $global-inverse-color;
+    #{$self}-testimonials-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      align-items: center;
+      #{$self}-title {
+        margin: 0;
+        color: #515f67;
+        &::before {
+          position:absolute;
+          bottom: 0;
+          width:45px;
+          height: 2px;
+          background-color: black;
+          content:"";
+        }
+      }
+    }
+    #{$self}-description-testimonials {
+      color: #515f67;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+    #{$self}-testimonials-say {
+      color: $global-primary-color;
+      font-weight: 700;
+    }
+  }
+    &-contact-address {
+      text-align: center;
+      #{$self}-contact-description {
+        color: #ffffff;
+        display: none;
+      }
+      #{$self}-contact-list{
+        color:#fff;
+        list-style-type: none;
+        padding-left: 0;
+      }
+    }
+    
+  &-footer {
+    background-color: $global-third-background;
+  }
+
+  @media (min-width: $breakpoint-xsmall) {
+    padding-top: $section-padding-vertical-top-m;
+    padding-bottom: $section-padding-vertical-bottom-m;
+    &-title {
+      text-align: start;
+    }
+    #{$self}-twitter-description {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: $breakpoint-small) {
+    padding-top: $section-padding-vertical-top;
+    padding-bottom: $section-padding-vertical-bottom;
+    #{$self}-twitter-description {
+      font-size: 22px;
+      line-height: 40px;
+    }
+    #{$self}-description-testimonials {
+      font-size: 18px;
+    }
+    &-contact-address {
+      text-align: start;
+      #{$self}-contact-description {
+        display: block;
+      }
+    }
+    #{$self}-porftolio-head {
+      display: flex; 
+      flex-direction: column;
+    }
+  }
+  @media (min-width: $breakpoint-medium) {
+    padding-top: $section-padding-vertical-top;
+    padding-bottom: $section-padding-vertical-bottom;
+    &-title {
+      font-size: $global-xlarge-font-size;
+    }
+    #{$self}-twitter-description {
+      font-size: 28px;
+    }
+    #{$self}-description-testimonials {
+      font-size: 28px;
+      line-height: 50px;
+    }
+    #{$self}-porftolio-head {
+      display: flex; 
+      flex-direction: inherit;
+    }
+  }
+}

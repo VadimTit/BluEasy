@@ -1,0 +1,59 @@
+
+.card {
+    $self: &;
+    text-align: center;
+    &-title {
+      margin: 20px 0 10px;
+      font-size: 24px;
+      color: $global-inverse-color;
+    }
+    &-description {
+      margin: 0;
+      font-size: 12px;
+      color: $global-inverse-color;
+    }
+    &-header {
+      position: relative;
+      & > figure {
+        margin-bottom: 0;
+      }
+    }
+
+    &-portfolio {
+      #{$self}-image {
+        img {
+          height: 270px;
+          opacity: 0.8;
+        }
+      }
+      #{$self}-cover {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(41, 47, 54, 0.8);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &-body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1;
+        }
+      }
+      &:hover {
+        #{$self}-cover {
+          display: flex;
+        }
+      }
+    }
+ }
+ @media (min-width: $breakpoint-xsmall) {
+   .card {
+     text-align: start;
+   }
+}
+
+  
+  

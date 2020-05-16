@@ -1,0 +1,103 @@
+$form-color:                 #333;
+$form-background:            transparent;
+
+$form-focus-color:            #333;
+$form-focus-background:       transparent;
+
+$form-font-size:              16px;
+$form-padding:                0 20px;
+$textarea-padding:            20px;
+
+$form-border:                 2px solid #ffffff;
+
+$form-height:                 60px;
+$form-small-height:           36px;
+$form-large-height:           56px;
+
+.form {
+  &-group {
+    margin-bottom: 20px;
+  }
+  &-label {
+    font-size: $form-font-size;
+    color: #fff;
+  }
+  &-control {
+    position: relative;
+    margin-bottom: 10px;
+    input {
+      max-width:100%;
+      width: 100%;
+      font-size: $form-font-size;
+      height: $form-height;
+      padding: $form-padding;
+      border: $form-border;
+      background: $form-background;
+      color: #4bcaff;
+      &:focus {
+        outline: none;
+        background: $form-focus-background;
+        color: #4bcaff;
+      }
+    }
+    label {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .form-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .form-icon ~ input {
+      padding-right: 40px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 220px;
+    font-size: 16px;
+    padding: $textarea-padding;
+    border: $form-border;
+    background: transparent;
+    color: #4bcaff;
+    &:focus {
+      outline: none;
+      background: $form-focus-background;
+      color: #4bcaff;
+    }
+  }
+  @media (min-width: $breakpoint-small) {
+    &-control {
+      margin-bottom: 40px;
+    }
+  }
+}
+.input-danger,
+.input-danger:focus {
+  color: red;
+  border-color: red;
+}
+
+.input-success,
+.input-success:focus {
+  color: green;
+  border-color: green;
+}
+.input-blank {
+  background-color: none;
+  border-color: transparent;
+}
+.input-blank:focus {
+  background-color: #e5e5e5;
+  border-style: dashed;
+}
+.form-error-message {
+  color: red;
+  position: absolute;
+  bottom: -16px;
+  display: none;
+}

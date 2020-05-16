@@ -1,0 +1,51 @@
+// Font
+$global-font-family:                           'Noto Sans JP', sans-serif;
+$global-secondary-font-family:                 'Segoe UI';
+$global-font-size:                             14px;
+$global-line-height:                           26px;    
+
+$global-xxlarge-font-size:                     42px;    
+$global-xlarge-font-size:                      30px;    
+$global-large-font-size:                       24px;    
+$global-medium-font-size:                      18px;    
+$global-small-font-size:                       14px;   
+
+// Colors
+
+$global-color:                                #8d8f92;
+$global-emphasis-color:                       #515f67;
+
+$global-primary-color:                        #4bcaff;
+$global-inverse-color:                        #ffffff;
+
+//Background
+
+$global-background:                           #fff;
+
+$global-primary-background:                   #23b7a4;
+$global-secondary-background:                 #515f67;
+$global-third-background:                     #353f46;
+
+$global-success-background:                   #32d296;
+$global-warning-background:                   #faa05a;
+$global-danger-background:                    #f0506e;
+
+
+// Border
+
+$global-border-width:                           1px;
+$global-border:                                #dde1e4;
+
+// Breackpoints 
+
+$breakpoint-xsmall:                             480px ; 
+$breakpoint-small:                              640px ;  
+$breakpoint-medium:                             960px ; 
+$breakpoint-large:                              1200px ; 
+$breakpoint-xlarge:                             1600px ; 
+
+$breakpoint-xsmall-max:                         ($breakpoint-xsmall - 1) ;
+$breakpoint-small-max:                          ($breakpoint-small - 1) ;
+$breakpoint-medium-max:                         ($breakpoint-medium - 1) ;
+$breakpoint-large-max:                          ($breakpoint-large - 1) ;
+$breakpoint-xlarge-max:                         ($breakpoint-xlarge - 1) ;

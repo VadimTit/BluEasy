@@ -1,0 +1,106 @@
+$button-font-size:                               $global-font-size;
+$button-small-font-size:                         $global-small-font-size;
+$button-large-font-size:                         $global-medium-font-size;
+
+$button-padding:                                 25px 115px;
+$button-large-padding:                           16px 30px;
+$button-small-padding:                           4px 8px;
+
+
+$button-primary-background:                      $global-primary-color;
+$button-primary-color:                           $global-inverse-color;
+$button-primary-hover-background:                darken($button-primary-background, 10%);
+$button-primary-hover-color:                     $global-inverse-color;
+$button-primary-active-background:               darken($button-primary-background, 20%);
+$button-primary-active-color:                    $global-inverse-color ;
+
+$button-secondary-background:                    #353f46;
+$button-secondary-color:                         #353f46;
+$button-secondary-hover-background:              darken($button-secondary-background, 5%);
+$button-secondary-hover-color:                   $global-inverse-color;
+$button-secondary-active-background:             darken($button-secondary-background, 10%);
+$button-secondary-active-color:                  $global-inverse-color;
+
+
+.button {
+  $self: &;
+  border: none;
+  display: flex;
+  margin: 0 auto;
+  text-transform: none;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-family: $global-secondary-font-family;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-primary {
+  background-color: $button-primary-background;
+  color: $button-primary-color;
+  transition: 1s;
+  &:hover,
+  &:focus {
+    background-color: $button-primary-hover-background;
+    color: $button-primary-hover-color;
+  }
+  
+  /* OnClick + Active */
+  &:active {
+    background-color: $button-primary-active-background;
+    color: $button-primary-active-color;
+  }
+}
+
+.button-secondary {
+  background-color: #515f67;
+  color: $button-secondary-color;
+  padding: $button-large-padding;
+  border: 2px solid $button-secondary-background;
+  display: block;
+  margin: 0 auto;
+  &:hover,
+  &:focus {
+    background-color: $button-secondary-background;
+    color: $button-secondary-hover-color;
+  }
+  
+  /* OnClick + Active */
+  &:active,
+  &.active {
+    background-color: $button-secondary-active-background;
+    color: $button-secondary-active-color;
+  }
+}
+
+.button-small {
+  padding: $button-small-padding;
+  font-size: $button-small-font-size;
+}
+
+.button-large {
+  padding: $button-large-padding;
+  font-size: $button-large-font-size;
+}
+@media (min-width: $breakpoint-small) {
+  .button {
+    display: inline-block;
+    margin: 0;
+  }
+}
+@media (min-width: $breakpoint-medium) {
+  .button-secondary {
+    margin: 0;
+  }
+}
+

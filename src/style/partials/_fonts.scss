@@ -1,0 +1,75 @@
+  @font-face {
+    font-family: 'Blueasy';
+    src:  url('../fonts/Blueasy.eot?y7av7m');
+    src:  url('../fonts/Blueasy.eot?y7av7m#iefix') format('embedded-opentype'),
+      url('../fonts/Blueasy.ttf?y7av7m') format('truetype'),
+      url('../fonts/Blueasy.woff?y7av7m') format('woff'),
+      url('../fonts/Blueasy.svg?y7av7m#Blueasy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Blueasy' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-social {
+    font-size: 30px;
+  }
+  .icon {
+    font-size: 40px;
+    color:white;
+  }
+  .icon-md {
+    font-size: 30px;
+  }
+  .icon-add:before {
+    content: "\e90c";
+  }
+  .icon-quotes-right:before {
+    content: "\e903";
+    color: #515f67;
+    font-size: 35px;
+  }
+  .icon-coffee2:before {
+    content: "\e901";
+  }
+  .icon-dribbble:before {
+    content: "\e904";
+  }
+  .icon-plus:before {
+    content: "\e900";
+  }
+  .icon-coffeeee:before {
+    content: "\e901";
+  }
+  .icon-image:before {
+    content: "\e906";
+  }
+  .icon-camera:before {
+    content: "\e907";
+  }
+  .icon-buymeacoffee:before {
+    content: "\e908";
+  }
+  .icon-google:before {
+    content: "\e909";
+  }
+  .icon-twitter:before {
+    content: "\e90a";
+   
+  }
+  .icon-camera-retro:before {
+    content: "\e90b";
+  }
+  
