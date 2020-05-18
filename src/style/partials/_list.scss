@@ -15,7 +15,8 @@
        & > a {
         border: 2px solid #ffffff;
         padding: 10px 10px;
-        text-decoration: none;  
+        text-decoration: none;
+        display: flex;
         &:hover {
           color: $global-primary-color;
           border: 2px solid $global-primary-color; 
