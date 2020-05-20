@@ -6,6 +6,7 @@
   <title>BlueEasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -127,7 +128,7 @@
               <a href="#" class="card card-portfolio">
                 <div class="card-header">
                   <figure class="card-image">
-                    <img src="img/portfolio.png" alt="person">
+                    <a data-fancybox="gallery" href="img/portfolio.png"><img src="img/portfolio.png"></a>
                   </figure>
                   <div class="card-cover">
                     <div class="card-cover-body">
@@ -373,6 +374,9 @@
       //= template/footer.html
     </main>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
