@@ -1,4 +1,6 @@
-
+.sticky + .section {
+  margin-top: 60px;
+}
 .card {
     $self: &;
     text-align: center;
@@ -24,6 +26,7 @@
           img {
           height: 270px;
           opacity: 0.8;
+          filter: grayscale(20%);
         }
       }
       #{$self}-cover {
