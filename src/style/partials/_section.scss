@@ -8,6 +8,37 @@ $section-padding-vertical-bottom:             $section-padding-vertical-bottom-m
 $section-primary-background:                  $global-primary-background;
 $section-secondary-background:                $global-secondary-background;
 
+.tab-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
+  height: 50px;
+    li {
+      list-style-type: none;
+      padding: 4px 15px;
+      color: #515f67;
+      cursor: pointer;
+      text-transform: uppercase;
+      &.active {
+        color: #4bcaff;
+        border: 2px solid #4bcaff;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+    }
+}
+.tab-vision {
+  display: none;
+}
+.tab-content {
+  padding-left: 0; 
+    li {
+      list-style-type: none;
+    }
+}
+
 .section {
   $self: &;
   position: relative;
@@ -83,11 +114,11 @@ $section-secondary-background:                $global-secondary-background;
   
   &-portfolio {
     #{$self}-porftolio-head {
-      display: flex; 
-      justify-content: space-between;
+      margin-bottom: 40px;
     }
     #{$self}-title {
       color: black;
+      margin-bottom: 20px;
       &::before {
         position:absolute;
         bottom: 0;
@@ -182,6 +213,14 @@ $section-secondary-background:                $global-secondary-background;
     #{$self}-twitter-description {
       font-size: 16px;
     }
+    #{$self}-porftolio-head {
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      #{$self}-title {
+        margin: 0;
+      }
+    }
   }
   @media (min-width: $breakpoint-small) {
     padding-top: $section-padding-vertical-top;
@@ -198,10 +237,6 @@ $section-secondary-background:                $global-secondary-background;
       #{$self}-contact-description {
         display: block;
       }
-    }
-    #{$self}-porftolio-head {
-      display: flex; 
-      flex-direction: column;
     }
   }
   @media (min-width: $breakpoint-medium) {
