@@ -8,6 +8,24 @@ $section-padding-vertical-bottom:             $section-padding-vertical-bottom-m
 $section-primary-background:                  $global-primary-background;
 $section-secondary-background:                $global-secondary-background;
 
+@keyframes fadein {
+  from {
+    margin-right: 100%;
+    width: 200%; 
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+#foo {
+  
+  animation: 1.5s fadein;
+
+}
+
 .tab-title {
   display: flex;
   align-items: center;
@@ -29,6 +47,7 @@ $section-secondary-background:                $global-secondary-background;
       }
     }
 }
+
 .tab-vision {
   display: none;
 }
